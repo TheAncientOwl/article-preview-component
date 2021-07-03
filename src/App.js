@@ -4,10 +4,12 @@ import Article from './components/article';
 
 const Container = styled.div`
   min-height: 100vh;
+  width: 90%;
+  margin: 0 auto;
+
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin: 0 3vw;
+  justify-content: center;
 `;
 
 export default function App() {

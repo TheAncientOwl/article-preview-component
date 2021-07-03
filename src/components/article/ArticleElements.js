@@ -1,34 +1,43 @@
 import styled from 'styled-components';
+import Breakpoints from '../../Breakpoints';
 
 export const Container = styled.div`
   position: relative;
   width: 50em;
   min-height: 19em;
+  margin: 1em;
 `;
 
 export const Card = styled.div`
   overflow: hidden;
+  width: 100%;
   display: flex;
   border-radius: 0.5em;
-`;
 
-export const Section = styled.div`
-  border: 1px solid green;
+  @media (max-width: ${Breakpoints.mobile}) {
+    flex-direction: column;
+  }
 `;
 
 export const Drawer = styled.div`
   width: 40%;
   display: flex;
+
+  @media (max-width: ${Breakpoints.mobile}) {
+    width: 100%;
+  }
 `;
 
 export const Image = styled.img`
-  object-fit: cover;
   overflow: hidden;
+
+  @media (max-width: ${Breakpoints.mobile}) {
+    width: 100%;
+  }
 `;
 
 export const ArticleContent = styled.div`
   position: relative;
-  width: 60%;
   padding: 2em;
   background: white;
 `;
@@ -75,6 +84,10 @@ export const Share = styled.div`
   position: absolute;
   bottom: 3em;
   right: 2em;
+
+  @media (max-width: ${Breakpoints.mobile}) {
+    right: 1em;
+  }
 `;
 
 export const ShareText = styled.div`
