@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  display: flex;
-  border-radius: 0.5em;
-  overflow: hidden;
-
+  position: relative;
   width: 50em;
   min-height: 19em;
+`;
+
+export const Card = styled.div`
+  overflow: hidden;
+  display: flex;
+  border-radius: 0.5em;
 `;
 
 export const Section = styled.div`
@@ -24,6 +27,7 @@ export const Image = styled.img`
 `;
 
 export const ArticleContent = styled.div`
+  position: relative;
   width: 60%;
   padding: 2em;
   background: white;
@@ -67,4 +71,19 @@ export const Date = styled.div`
   margin-top: 0.5em;
 `;
 
-export const Share = styled.div``;
+export const Share = styled.div`
+  position: absolute;
+  bottom: 3em;
+  right: 2em;
+`;
+
+export const ShareText = styled.div`
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.9em;
+  color: ${({ theme }) => theme.desaturatedDarkBlue};
+`;
+
+export const ShareIcon = styled.img`
+  margin-left: 0.9em;
+`;
